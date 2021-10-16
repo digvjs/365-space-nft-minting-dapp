@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../../assets/img/8bit-logo.png'
+// import Logo from '../../assets/img/8bit-logo.png'
 
 const Header = () => {
   return (
     <header id="header" className="">
       <div className="container d-flex align-items-center">
-        <a href="index.html" className="logo mr-auto"><img src={Logo} alt="" /></a>
+        <a href="index.html" className="logo mr-auto"><img src="/assets/img/8bit-logo.png" alt="" /></a>
         <nav className="nav-menu d-none d-lg-block">
           <ul>
             <li className="active"><Link to="/">Home</Link></li>
