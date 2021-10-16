@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    viewBox="0 0 584 822" style="enable-background:new 0 0 584 822;" xml:space="preserve">
+    { <style type="text/css">
+        .st0{fill:#47EBE0;}
+        .st1{fill:#CE207C;}
+        .st2{fill:#E34D95;}
+        .st3{fill:#FF99CF;}
+        .st4{fill:#580bce;}
+        .st5{fill:#7f35e3;}
+        .st6{fill:#b17fff;}
+    </style> }
+    <path className="st0 btn-1" d="M150.3,540.2h-27c-0.4,0-0.8,0-1.1-0.1l0,33.3c0.4-0.1,0.8-0.1,1.1-0.1h27c4.5,0,8.2-2.8,8.2-6.3v-20.5C158.5,543,154.8,540.2,150.3,540.2z"/>
+    <path className="st0 btn-2" d="M81.1,540.1c-0.4,0.1-0.8,0.1-1.1,0.1h-27c-4.5,0-8.2,2.8-8.2,6.3V567c0,3.5,3.7,6.3,8.2,6.3h27c0.4,0,0.8,0,1.1,0.1L81.1,540.1z"/>
+    <g className="btn-3">
+        <g>
+        <ellipse transform="matrix(0.2298 -0.9732 0.9732 0.2298 -287.1071 775.2178)" className="st1" cx="346.2" cy="569" rx="30.2" ry="30.2" />
+        </g>
+        <g>
+        <ellipse className="st2" cx="346.2" cy="560.3" rx="21.5" ry="21.5" />
+        </g>
+        <g>
+        <g>
+            <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -292.6 398.7731)" className="st3" cx="335.1" cy="552.6" rx="8.1" ry="8.1" />
+        </g>
+        <g>
+            <path className="st3" d="M357.5,557.3c0,2.6-2.1,4.7-4.7,4.7c-2.6,0-4.7-2.1-4.7-4.7c0-2.6,2.1-4.7,4.7-4.7S357.5,554.7,357.5,557.3z"/>
+        </g>
+        </g>
+    </g>
+    <g className="btn-4">
+        <g>
+        <circle className="st4" cx="425.3" cy="532.2" r="30.2" />
+        </g>
+        <g>
+        <ellipse className="st5" cx="425.3" cy="523.5" rx="21.5" ry="21.5" />
+        </g>
+        <g>
+        <g>
+            <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -243.432 443.8828)" className="st6" cx="414.1" cy="515.8" rx="8.1" ry="8.1" />
+        </g>
+        <g>
+            <path className="st6" d="M436.5,520.5c0,2.6-2.1,4.7-4.7,4.7c-2.6,0-4.7-2.1-4.7-4.7c0-2.6,2.1-4.7,4.7-4.7C434.4,515.8,436.5,517.9,436.5,520.5z"/>
+        </g>
+        </g>
+    </g>
+</svg>
