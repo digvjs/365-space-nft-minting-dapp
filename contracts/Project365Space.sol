@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: UNLICENSED
-
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
@@ -19,7 +18,6 @@ contract Project365Space is ERC721Enumerable, Ownable {
     uint256 public cost = 0.1 ether;    // Cost per NFT
     uint256 public maxSupply = 5110;
     uint256 public maxMintAmount = 20;  // Maximum number of tokens can be minted in single transaction
-    uint256 public maxForAccount = 20;  // Maximum number of tokens an account can mint
     bool public paused = false;
     bool public isSaleActive = false;
 
@@ -46,9 +44,6 @@ contract Project365Space is ERC721Enumerable, Ownable {
         if (msg.sender != owner()) {
             require(isSaleActive, "Sale is inactive");
             require(msg.value >= cost.mul(_mintAmount), "Not enough ethers sent to mint NFTs!");
-
-            uint256 userBalance = balanceOf(_to);
-            require(userBalance.add(_mintAmount) <= maxForAccount, "Account balance exceeds allowed minting quantity");
         }
 
         for (uint256 i = 1; i <= _mintAmount; i++) {
@@ -112,10 +107,6 @@ contract Project365Space is ERC721Enumerable, Ownable {
 
     function setmaxMintAmount(uint256 _newmaxMintAmount) public onlyOwner() {
         maxMintAmount = _newmaxMintAmount;
-    }
-
-    function setmaxForAccount(uint256 _newMaxForAccount) public onlyOwner() {
-        maxForAccount = _newMaxForAccount;
     }
 
     function setBaseURI(string memory _newBaseURI) public onlyOwner {
