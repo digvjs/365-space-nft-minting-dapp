@@ -89,7 +89,8 @@
   });
 
   // Mobile Navigation
-  if ($('.nav-menu').length) {
+  // console.log('length', $('.nav-menu').length);
+  // if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({
       class: 'mobile-nav d-lg-none'
     });
@@ -119,9 +120,9 @@
         }
       }
     });
-  } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
-    $(".mobile-nav, .mobile-nav-toggle").hide();
-  }
+  // } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
+  //   $(".mobile-nav, .mobile-nav-toggle").hide();
+  // }
 
   // Toggle .header-scrolled class to #header when page is scrolled
   $(window).scroll(function () {
