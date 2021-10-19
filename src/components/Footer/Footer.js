@@ -1,21 +1,19 @@
 import React from 'react'
-// import twitterLogo from '../../assets/img/twitter-8bit.svg'
-// import DiscordLogo from '../../assets/img/discord-8bit.svg'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
     <footer id="footer">
       <div className="container">
-        <div className="footer-center">
+        {/* <div className="footer-center">
           <a href="https://mobile.twitter.com/my8bituniverse"><img src="/assets/img/twitter-8bit.svg" alt="" /></a>
           <a href="https://discord.gg/v7MvdBKJDH"><img src="/assets/img/discord-8bit.svg" alt="" /></a>
-        </div>
+        </div> */}
         <div className="footer-center mt-5">
           <Link className="footer" to="/terms">Terms</Link>
         </div>
         <div className="footer-center mt-5">
-          &copy; 365 Space Project.
+          Ⓒ 365 Space Project.
         </div>
       </div>
     </footer>

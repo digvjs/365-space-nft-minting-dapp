@@ -56,6 +56,11 @@ const Home = () => {
     setNumberOfNFTs(event.target.value)
   }
 
+  const parseAccount = (address) => {
+    let len = address.length;
+    return address.substr(0, 6) + '...' + address.substr(len - 4, len);
+  }
+
   return (
     <>
       <section id="hero" className="d-flex align-items-center">
@@ -65,16 +70,17 @@ const Home = () => {
           </div>
           <div className="row reverse-mobile">
             <div className="col-12 col-md-6 left-text-col">
-              <h1>Welcome to <br /><span>8 BIT UNIVERSE</span>
+              <h1 className="mb-4">
+                Welcome to the<br />
+                <span>365 Space Project</span>
               </h1>
-              <h2>Become a Citizen.</h2>
               <div className="d-flex">
                 <a href="#counts" className="btn-get-started scrollto">MINT</a>
-                <a href="https://vimeo.com/589027820" className="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i className="icofont-play-alt-2"></i></a>
               </div>
             </div>
             <div className="col-12 col-md-6 pos-relative">
-              <div className="gameboy">
+              <img src="https://i.pinimg.com/originals/a0/26/1b/a0261b885cfba5a65c675c33327acf5a.png" alt="" className="spaceboy" />
+              {/* <div className="gameboy">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 584 822" style={{ enableBackground: 'new 0 0 584 822' }} xmlSpace="preserve">
                   <path className="st0 btn-1" d="M150.3,540.2h-27c-0.4,0-0.8,0-1.1-0.1l0,33.3c0.4-0.1,0.8-0.1,1.1-0.1h27c4.5,0,8.2-2.8,8.2-6.3v-20.5C158.5,543,154.8,540.2,150.3,540.2z" />
                   <path className="st0 btn-2" d="M81.1,540.1c-0.4,0.1-0.8,0.1-1.1,0.1h-27c-4.5,0-8.2,2.8-8.2,6.3V567c0,3.5,3.7,6.3,8.2,6.3h27c0.4,0,0.8,0,1.1,0.1L81.1,540.1z" />
@@ -141,7 +147,7 @@ const Home = () => {
                 <img src="/assets/img/gameboy/frankenstein_batman_purple_background.png" className="w-100 slide-gameboy" alt="" />
                 <img src="/assets/img/gameboy/purple_cyclopse.png" className="w-100 slide-gameboy" alt="" />
                 <img src="/assets/img/gameboy/bane_hoodie_ethereum_green_background.png" className="w-100 slide-gameboy" alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -150,21 +156,21 @@ const Home = () => {
         <section id="about" className="about section-bg">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
-              <h3><span>The &nbsp;Big &nbsp;Bang</span></h3>
+              <h1><span>Our Goal</span></h1>
             </div>
             <div className="row">
               <div className="col-12 share-tech">
-                <p>We are the <span>IMMORTAL ONES</span>. We created the 8 Bit Metaverse to exist both in the real world & the digital world. Through the 8 Bit Metaverse, we intend to create & develop a digital & real life community for the 8 Bit Metaverse Early Citizens
+                <p>
+                  In 1957 the Space Era Started. This was also around the same time period where an increased amount of pollution started to flood our world. Through the 365 Space Project, we intend to donate and sponsor different charities to help reduce air pollution. After the initial sellout, we pledge 10,000 trees and a portion of royalties to help various causes.
                 </p>
                 <p>
-                  In total, there are 8888 8 Bit Metaverse Early Citizens NFT. Each Early Citizens NFT is unique and corresponds to a unique custom generated avatar.
+                  In total, there will be 5110 NFTs Minted in the 365 Space Projects. Each NFT will be a unique star constellation that is correlated to date, time, and continents around the world. Holding one of these NFTs will give you access to private community events, store discounts requested by our community, and an evolving full-scale project.
                 </p>
                 <p>
-                  You can become an Early Citizen in the 8 Bit Metaverse by minting a 8 Bit Metaverse NFT at a cost of 0.08888 ETH + Gas fee.
+                  You can become a part of the 365 Space Project by minting an NFT at a cost of 0.1 ETH + Gas fee.
                 </p>
               </div>
             </div>
-            <img src="/assets/img/8_bit_universe.png" className="w-100 mt-3" alt="" />
           </div>
         </section>
         <section id="counts" className="counts">
@@ -173,14 +179,14 @@ const Home = () => {
               (blockchain.account !== "" && blockchain.smartContract !== null) ?
                 (<div className="container" >
                   <div className="section-title">
-                    <h3><span>Total &nbsp;Minted</span></h3>
+                    <h1><span>Total &nbsp;Minted</span></h1>
                   </div>
                   <div className="row mint-count">
                     <span data-toggle="counter-up" className="mintedAmount">{data.totalSupply}</span>/<span data-toggle="counter-up">{data.maxSupply ?? 5110}</span>
                   </div>
                   <div className="row text-center mt-4">
                     <div className="col-md-12">
-                      <span id="status"><span className="badge bg-info">Connected: {blockchain.account}</span></span>
+                      <span id="status"><span className="bg-info p-2">Connected &nbsp; {parseAccount(blockchain.account)}</span></span>
                     </div>
                   </div>
                   {
@@ -200,13 +206,13 @@ const Home = () => {
                             <div className="col-md-8 offset-md-2">
                               <div className="row">
                                 <div className="col-2 text-right">
-                                  <span>1</span> &nbsp;&nbsp;
+                                  <span>1</span>
                                 </div>
                                 <div className="col-8">
                                   <input type="range" className="range-slider" min="1" max={data.maxMintAmount ?? 20} value={numberOfNFTs} step="1" onChange={onChangeAmount} />
                                 </div>
                                 <div className="col-2 text-left">
-                                  &nbsp;&nbsp; <span>{data.maxMintAmount ?? 20}</span>
+                                  <span>{data.maxMintAmount ?? 20}</span>
                                 </div>
                               </div>
                             </div>
@@ -263,7 +269,7 @@ const Home = () => {
         </section>
         <section id="roadmap" className="roadmap">
           <div className="section-title">
-            <h3><span>Roadmap</span></h3>
+            <h1><span>Roadmap</span></h1>
           </div>
           <div className="container py-5">
             <div className="timeline share-tech">
@@ -272,50 +278,54 @@ const Home = () => {
                   <i className="far fa-grin-wink"></i>
                 </div>
                 <div className="timeline-body">
-                  <h4 className="timeline-title"><span className="badge">8 &nbsp;Bit &nbsp;Digital &nbsp;Metaverse</span></h4>
+                  <div className="timeline-title"><span className="badge">Short &nbsp;& &nbsp;Immediate</span></div>
                   <ul className="todo-list">
                     <li>
                       <input type="checkbox" id="find" disabled />
                       <label className="toggle" htmlFor="find"></label>
-                      20 days after Mint - 1st airdrop
+                      10 Days after mint - First store discount announced for holders
                     </li>
                     <li>
                       <input type="checkbox" disabled id="build" />
                       <label className="toggle" htmlFor="build"></label>
-                      30 days after Mint - 8 Bit Metaverse Digital Expansion Phase 1
+                      15 Days after mint - Influencer and celebrity collaborations
                     </li>
                     <li>
                       <input type="checkbox" disabled id="ship" />
                       <label className="toggle" htmlFor="ship"></label>
-                      50 days after Mint - NFT collaboration announcement & deployment
+                      20 Days after mint - 10,000 trees planted
                     </li>
                     <li>
                       <input type="checkbox" disabled id="ship" />
                       <label className="toggle" htmlFor="ship"></label>
-                      70 days after Mint - 8 Bit Metaverse Digital Expansion Phase 2
+                      30 Days after mint - Updated artwork for every NFT
                     </li>
                     <li>
                       <input type="checkbox" disabled id="ship" />
                       <label className="toggle" htmlFor="ship"></label>
-                      90 days after Mint - NFT collaboration announcement & deployment
+                      40 Days after mint - Early access to other NFT collections
                     </li>
                     <li>
                       <input type="checkbox" disabled id="ship" />
                       <label className="toggle" htmlFor="ship"></label>
-                      120 days after Mint - 8 Bit Metaverse Digital Expansion Phase 3
+                      50 Days after mint - Community voted collaborations
                     </li>
                     <li>
                       <input type="checkbox" disabled id="ship" />
                       <label className="toggle" htmlFor="ship"></label>
-                      Every month After - community vote on 8 Bit Metaverse Digital Expansion
+                      90 Day after mint - Community voted events
                     </li>
                     <li>
                       <input type="checkbox" disabled id="ship" />
                       <label className="toggle" htmlFor="ship"></label>
-                      Every month After - deployment on the 8 Bit Metaverse Digital Expansion
+                      120 Days after mint - 3D NFT update to all artwork
+                    </li>
+                    <li>
+                      <input type="checkbox" disabled id="ship" />
+                      <label className="toggle" htmlFor="ship"></label>
+                      12 months after mint - partner with other NFT projects to own "space" in the metaverse.
                     </li>
                   </ul>
-                  <p className="timeline-subtitle">Short & Immediate</p>
                 </div>
               </div>
               <div className="timeline-container danger">
@@ -323,45 +333,14 @@ const Home = () => {
                   <i className="far fa-grin-hearts"></i>
                 </div>
                 <div className="timeline-body">
-                  <h4 className="timeline-title"><span className="badge">8 &nbsp;Bit &nbsp;Real &nbsp;Life &nbsp;Metaverse</span></h4>
+                  <div className="timeline-title"><span className="badge">Long &nbsp; Term</span></div>
                   <ul className="todo-list">
                     <li>
                       <input type="checkbox" id="find" disabled />
                       <label className="toggle" htmlFor="find"></label>
-                      Weekly community event on Discord
-                    </li>
-                    <li>
-                      <input type="checkbox" disabled id="build" />
-                      <label className="toggle" htmlFor="build"></label>
-                      6 months after Mint - 1st in real life community meet up
-                    </li>
-                    <li>
-                      <input type="checkbox" disabled id="ship" />
-                      <label className="toggle" htmlFor="ship"></label>
-                      Yearly 8 Bit Metaverse IRL airdrops
-                    </li>
-                    <li>
-                      <input type="checkbox" disabled id="ship" />
-                      <label className="toggle" htmlFor="ship"></label>
-                      Yearly in real life community meet up
-                    </li>
-                    <li>
-                      <input type="checkbox" disabled id="ship" />
-                      <label className="toggle" htmlFor="ship"></label>
-                      Launch of 8 Bit Metaverse Merchandise & Comics
+                      With the revenue generated from the 365 Space Project, we will fund the development team to make frequent updates so that our NFTs are always evolving and continue donations frequently to help air pollution so everyone in our world can enjoy star constellations. We will also continue to do celebrity collaboration and add incentives for holders. As this project grows we will add other NFT collections to help increase our impact on air pollution.
                     </li>
                   </ul>
-                  <p className="timeline-subtitle">Short & Immediate</p>
-                </div>
-              </div>
-              <div className="timeline-container success">
-                <div className="timeline-icon">
-                  <i className="far fa-grin-tears"></i>
-                </div>
-                <div className="timeline-body">
-                  <h4 className="timeline-title"><span className="badge">8 &nbsp;Bit &nbsp;Beyond</span></h4>
-                  <p>With the revenue generated from the 8 Bit Metaverse we want to continue to fund our dev team to deploy & finalize the 8 Bit Metaverse Game. This is our long term goal, here are some of our demo graphics, the completion of the 8 Bit Metaverse game really depends on the growth of the 8 Bit Digital Metaverse. Although we have private investor capital, the growth of the 8 Bit Metaverse would really accelerate our development.</p>
-                  <p className="timeline-subtitle">Long Term</p>
                 </div>
               </div>
             </div>
@@ -369,37 +348,37 @@ const Home = () => {
         </section>
         <section id="community" className="community">
           <div className="section-title">
-            <h3><span>Community</span></h3>
+            <h1><span>Community</span></h1>
           </div>
           <div className="container py-5">
-            <p className="share-tech">A community is empty without Citizens. To build the Metaverse, our first & foremost priority is to ensure everyone is accepted in the community. We want to provide you a place to make friends, network or just chill in both the digital world, the real world and the 8 Bit Metaverse Game that we are currently developing.</p>
+            <p className="share-tech">Our movement will fail without a strong community. We are dedicated to making a strong environment where everyone has equal say on this project and the causes we choose to support. This will be a space to make friends, network, and discuss long-term ideas for the 365 Space Project.</p>
           </div>
         </section>
         <section id="team" className="team">
           <div className="section-title">
-            <h3><span>Immortal &nbsp;Ones</span></h3>
+            <h1><span>Our &nbsp;Founders</span></h1>
           </div>
           <div className="container py-5">
             <div className="row">
               <div className="col-12 col-md-4 mb-4 mb-md-0">
-                <img className="w-100" src="/assets/img/gameboy/penguin_red_background.png" alt="" />
+                <img className="w-100" src="/assets/img/andrew.png" alt="" />
                 <div className="text-center mt-2 text-white">
-                  Immortal &nbsp; Mark<br />
-                  <div className="mt-3 small-text">Head Programmer</div>
+                  Andrew <br />
+                  <div className="mt-3 small-text">Marketing</div>
                 </div>
               </div>
               <div className="col-12 col-md-4 mb-4 mb-md-0">
-                <img className="w-100" src="/assets/img/gameboy/frankenstein_batman_purple_background.png" alt="" />
+                <img className="w-100" src="/assets/img/vitalik.png" alt="" />
                 <div className="text-center mt-2 text-white">
-                  Immortal &nbsp; Shane<br />
-                  <div className="mt-3 small-text">Head Web Designer / Metaverse</div>
+                  Vitalik<br />
+                  <div className="mt-3 small-text">Programing</div>
                 </div>
               </div>
               <div className="col-12 col-md-4 mb-4 mb-md-0">
-                <img className="w-100" src="/assets/img/gameboy/chicken_pilot_hat_pink_background.png" alt="" />
+                <img className="w-100" src="/assets/img/ivan.png" alt="" />
                 <div className="text-center mt-2 text-white">
-                  Immortal &nbsp; Eric<br />
-                  <div className="mt-3 small-text">Head Marketing</div>
+                  Ivan<br />
+                  <div className="mt-3 small-text">Website</div>
                 </div>
               </div>
             </div>
