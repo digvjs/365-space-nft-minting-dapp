@@ -8,14 +8,14 @@
 
 @font-face {
   font-family: 'voyager_grotesque_regular';
-  src: url('../fonts/voyager-grotesque/Voyager\ Grotesque\(regular\).woff') format('woff');
+  src: url('../fonts/voyager-grotesque-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'voyager_grotesque_bold';
-  src: url('../fonts/voyager-grotesque/V-GERB\(bold\).woff') format('woff');
+  src: url('../fonts/voyager-grotesque-bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

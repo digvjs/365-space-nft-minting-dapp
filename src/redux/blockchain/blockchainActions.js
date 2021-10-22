@@ -52,10 +52,10 @@ export const connect = () => {
         // 4 - Rinkeby
 
         // eslint-disable-next-line
-        if (networkId == 4) {
+        if (networkId == 1) {
           const SmartContractObj = new Web3EthContract(
             SmartContract.abi,
-            "0xe6b19A6e54AAaef62F4a907Ffc387b8da34702FF"
+            "0xd8108ba38aD262a9206da06a0BA7FFF5d5EEa125"
           );
           dispatch(
             connectSuccess({

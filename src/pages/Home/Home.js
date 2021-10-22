@@ -23,7 +23,7 @@ const Home = () => {
       .mint(blockchain.account, _amount)
       .send({
         gasLimit: lastBlock.gasLimit,
-        to: "0xe6b19A6e54AAaef62F4a907Ffc387b8da34702FF",
+        to: "0xd8108ba38aD262a9206da06a0BA7FFF5d5EEa125",
         from: blockchain.account,
         value: blockchain.web3.utils.toWei((cost * _amount).toString(), "ether"),
       })
@@ -79,75 +79,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-12 col-md-6 pos-relative">
-              <img src="https://i.pinimg.com/originals/a0/26/1b/a0261b885cfba5a65c675c33327acf5a.png" alt="" className="spaceboy" />
-              {/* <div className="gameboy">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 584 822" style={{ enableBackground: 'new 0 0 584 822' }} xmlSpace="preserve">
-                  <path className="st0 btn-1" d="M150.3,540.2h-27c-0.4,0-0.8,0-1.1-0.1l0,33.3c0.4-0.1,0.8-0.1,1.1-0.1h27c4.5,0,8.2-2.8,8.2-6.3v-20.5C158.5,543,154.8,540.2,150.3,540.2z" />
-                  <path className="st0 btn-2" d="M81.1,540.1c-0.4,0.1-0.8,0.1-1.1,0.1h-27c-4.5,0-8.2,2.8-8.2,6.3V567c0,3.5,3.7,6.3,8.2,6.3h27c0.4,0,0.8,0,1.1,0.1L81.1,540.1z" />
-                  <g className="btn-3">
-                    <g>
-                      <ellipse transform="matrix(0.2298 -0.9732 0.9732 0.2298 -287.1071 775.2178)" className="st1" cx="346.2" cy="569" rx="30.2" ry="30.2" />
-                    </g>
-                    <g>
-                      <ellipse className="st2" cx="346.2" cy="560.3" rx="21.5" ry="21.5" />
-                    </g>
-                    <g>
-                      <g>
-                        <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -292.6 398.7731)" className="st3" cx="335.1" cy="552.6" rx="8.1" ry="8.1" />
-                      </g>
-                      <g>
-                        <path className="st3" d="M357.5,557.3c0,2.6-2.1,4.7-4.7,4.7c-2.6,0-4.7-2.1-4.7-4.7c0-2.6,2.1-4.7,4.7-4.7S357.5,554.7,357.5,557.3z" />
-                      </g>
-                    </g>
-                  </g>
-                  <g className="btn-4">
-                    <g>
-                      <circle className="st4" cx="425.3" cy="532.2" r="30.2" />
-                    </g>
-                    <g>
-                      <ellipse className="st5" cx="425.3" cy="523.5" rx="21.5" ry="21.5" />
-                    </g>
-                    <g>
-                      <g>
-                        <ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -243.432 443.8828)" className="st6" cx="414.1" cy="515.8" rx="8.1" ry="8.1" />
-                      </g>
-                      <g>
-                        <path className="st6" d="M436.5,520.5c0,2.6-2.1,4.7-4.7,4.7c-2.6,0-4.7-2.1-4.7-4.7c0-2.6,2.1-4.7,4.7-4.7C434.4,515.8,436.5,517.9,436.5,520.5z" />
-                      </g>
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <img src="/assets/img/gameboy.svg" className="w-100 gameboy-bg" alt="" />
-              <div className="inner-msg">
-                <div className="click-text">Click&nbsp; buttons &nbsp;to &nbsp; scroll</div>
-                <div className="button-row">
-                  <img src="/assets/img/a-btn.svg" alt="" /><div className="text-row-btn">Scroll &nbsp; Right</div>
-                </div>
-                <div className="button-row">
-                  <img src="/assets/img/b-btn.svg" alt="" /><div className="text-row-btn">Scroll &nbsp; Left</div>
-                </div>
-                <div className="button-row">
-                  <img src="/assets/img/r-btn.svg" alt="" /><div className="text-row-btn">Scroll &nbsp; Right</div>
-                </div>
-                <div className="button-row">
-                  <img src="/assets/img/l-btn.svg" alt="" /><div className="text-row-btn">Scroll &nbsp; Left</div>
-                </div>
-              </div>
-              <div className="owl-carousel gameboy-carousel">
-                <img src="/assets/img/gameboy/blue_skin_ethereum_icey_goggles_black_bowtie_tiffany_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/brown_head_burglar_hoodie_organge_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/blue_skin_goggles_headphones_cigarrette_red_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/brown_head_crown_green_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/brown_head_cyclopse_pink_hair_blunt_yellow_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/brown_head_hoodie_peach_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/rooster_crown_blue_sunglasses_tiffany_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/chicken_pilot_hat_pink_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/dracula_goggles_tiffany_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/frankenstein_batman_purple_background.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/purple_cyclopse.png" className="w-100 slide-gameboy" alt="" />
-                <img src="/assets/img/gameboy/bane_hoodie_ethereum_green_background.png" className="w-100 slide-gameboy" alt="" />
-              </div> */}
+              <img src="/assets/img/spaceboy.png" alt="" className="spaceboy" />
             </div>
           </div>
         </div>
@@ -167,7 +99,7 @@ const Home = () => {
                   In total, there will be 5110 NFTs Minted in the 365 Space Projects. Each NFT will be a unique star constellation that is correlated to date, time, and continents around the world. Holding one of these NFTs will give you access to private community events, store discounts requested by our community, and an evolving full-scale project.
                 </p>
                 <p>
-                  You can become a part of the 365 Space Project by minting an NFT at a cost of 0.1 ETH + Gas fee.
+                  You can become a part of the 365 Space Project by minting an NFT at a cost of 0.098 ETH + Gas fee.
                 </p>
               </div>
             </div>
@@ -190,48 +122,61 @@ const Home = () => {
                     </div>
                   </div>
                   {
-                    (data.totalSupply === data.maxSupply) ?
-                      (
-                        <div className="row text-center mt-4 flex-center">
-                          SOLD OUT
-                        </div>
-                      )
-                      : (
-                        <>
-                          <div className="mt-4 text-center">
-                            <span>Please use below slider to select the number of NFTs to mint.</span><br />
-                            <span>1 SPACE = {blockchain.web3.utils.fromWei(data.cost.toString())} ETH</span>
+                    (() => {
+                      if (data.totalSupply === data.maxSupply) {
+                        return (
+                          <div className="row text-center mt-4 flex-center">
+                            SOLD OUT
                           </div>
-                          <div className="row text-center" style={{ marginTop: 30 }}>
-                            <div className="col-md-8 offset-md-2">
-                              <div className="row">
-                                <div className="col-2 text-right">
-                                  <span>1</span>
+                        )
+                      } else {
+                        if (!data.isSaleActive) {
+                          return (
+                            <div class="text-center mt-4">
+                              Sale is not active!
+                            </div>
+                          )
+                        }
+                        else {
+                          return (
+                            <>
+                              <div className="mt-4 text-center">
+                                <span>Please use below slider to select the number of NFTs to mint.</span><br />
+                                <span>1 SPACE = {blockchain.web3.utils.fromWei(data.cost.toString())} ETH</span>
+                              </div>
+                              <div className="row text-center" style={{ marginTop: 30 }}>
+                                <div className="col-md-8 offset-md-2">
+                                  <div className="row">
+                                    <div className="col-2 text-right">
+                                      <span>1</span>
+                                    </div>
+                                    <div className="col-8">
+                                      <input type="range" className="range-slider" min="1" max={data.maxMintAmount ?? 20} value={numberOfNFTs} step="1" onChange={onChangeAmount} />
+                                    </div>
+                                    <div className="col-2 text-left">
+                                      <span>{data.maxMintAmount ?? 20}</span>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div className="col-8">
-                                  <input type="range" className="range-slider" min="1" max={data.maxMintAmount ?? 20} value={numberOfNFTs} step="1" onChange={onChangeAmount} />
+                                <div className="col-md-12 mt-4" style={{ marginTop: 20 }}>
+                                  <button className="btn btn-get-started"
+                                    disabled={claimingNft ? 1 : 0}
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      mintNFTs(numberOfNFTs);
+                                      getData();
+                                    }}>
+                                    {claimingNft ? "MINTING IN PROCESS..." : `Mint ${numberOfNFTs} SPACE`}
+                                  </button>
                                 </div>
-                                <div className="col-2 text-left">
-                                  <span>{data.maxMintAmount ?? 20}</span>
+                                <div className="col-md-12 text-warning mt-4" style={{ textAlign: "center" }} dangerouslySetInnerHTML={{ __html: feedback }}>
                                 </div>
                               </div>
-                            </div>
-                            <div className="col-md-12 mt-4" style={{ marginTop: 20 }}>
-                              <button className="btn btn-get-started"
-                                disabled={claimingNft ? 1 : 0}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  mintNFTs(numberOfNFTs);
-                                  getData();
-                                }}>
-                                {claimingNft ? "MINTING IN PROCESS..." : `Mint ${numberOfNFTs} SPACE`}
-                              </button>
-                            </div>
-                            <div className="col-md-12 text-warning mt-4" style={{ textAlign: "center" }} dangerouslySetInnerHTML={{ __html: feedback }}>
-                            </div>
-                          </div>
-                        </>
-                      )
+                            </>
+                          )
+                        }
+                      }
+                    })()
                   }
                 </div>
                 )
@@ -257,7 +202,7 @@ const Home = () => {
                     </div>
                     {blockchain.errorMsg !== "" ? (
                       <>
-                        <div className="text-danger" style={{ textAlign: "center" }}>
+                        <div className="text-danger mt-4" style={{ textAlign: "center" }}>
                           {blockchain.errorMsg}
                         </div>
                       </>

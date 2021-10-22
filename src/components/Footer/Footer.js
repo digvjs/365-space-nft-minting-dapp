@@ -12,6 +12,12 @@ const Footer = () => {
         <div className="footer-center mt-5">
           <Link className="footer" to="/terms">Terms</Link>
         </div>
+        {/* <div className="text-center mt-4">
+          <div className="text-center">Contract</div>
+          <div className="text-center">
+            <a className="badge badge-dark" href="https://etherscan.io/address/0xd8108ba38aD262a9206da06a0BA7FFF5d5EEa125" target="_blank">0xd8108ba38aD262a9206da06a0BA7FFF5d5EEa125</a>
+          </div>
+        </div> */}
         <div className="footer-center mt-5">
           Ⓒ 365 Space Project.
         </div>
