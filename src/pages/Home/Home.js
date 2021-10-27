@@ -308,22 +308,27 @@ const Home = () => {
               <div className="col-12 col-md-4 mb-4 mb-md-0">
                 <img className="w-100" src="/assets/img/andrew.png" alt="" />
                 <div className="text-center mt-2 text-white">
-                  Andrew <br />
+                  Space Andrew <br />
                   <div className="mt-3 small-text">Marketing</div>
+                  <p className="mt-3">
+                    Has worked in the crypto space for the past 3 years on various projects. Best known for working with big-name companies such as MTV, Purekana, Reef Dispensaries, and a number of different celebrities.
+                  </p>
                 </div>
               </div>
               <div className="col-12 col-md-4 mb-4 mb-md-0">
                 <img className="w-100" src="/assets/img/vitalik.png" alt="" />
                 <div className="text-center mt-2 text-white">
-                  Vitalik<br />
+                  Space Vitalik<br />
                   <div className="mt-3 small-text">Programing</div>
+                  <p className="mt-3">Has been working for varios crypto projects for the past year developing the source code and meta data. He personally has coded each image for the 365 Space Project as they are not randomly generated like most NFT projects.</p>
                 </div>
               </div>
               <div className="col-12 col-md-4 mb-4 mb-md-0">
                 <img className="w-100" src="/assets/img/ivan.png" alt="" />
                 <div className="text-center mt-2 text-white">
-                  Ivan<br />
+                  Space Ivan<br />
                   <div className="mt-3 small-text">Website</div>
+                  <p className="mt-3">Has been creating website for clients for the past 7 years and is very familiar with UI. If you would like to see anything added to the website be sure to mention it in the Discord!</p>
                 </div>
               </div>
             </div>
