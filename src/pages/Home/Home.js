@@ -91,15 +91,24 @@ const Home = () => {
               <h1><span>Our Goal</span></h1>
             </div>
             <div className="row">
-              <div className="col-12 share-tech">
+              <div className="col-12 text-justify share-tech">
                 <p>
-                  In 1957 the Space Era Started. This was also around the same time period where an increased amount of pollution started to flood our world. Through the 365 Space Project, we intend to donate and sponsor different charities to help reduce air pollution. After the initial sellout, we pledge 10,000 trees and a portion of royalties to help various causes.
+                  In 1957 the great Space Era began…
                 </p>
                 <p>
-                  In total, there will be 5110 NFTs Minted in the 365 Space Projects. Each NFT will be a unique star constellation that is correlated to date, time, and continents around the world. Holding one of these NFTs will give you access to private community events, store discounts requested by our community, and an evolving full-scale project.
+                  We all know how that fairy tale goes because we’re living in the collateral damage of it every day, all around the globe. Not only does the Space Era produce searches for life beyond this planet, but they do so without any inhibitions for the environment, and the people affected by their lust for the destruction of Earth’s night sky.
                 </p>
                 <p>
-                  You can become a part of the 365 Space Project by minting an NFT at a cost of 0.098 ETH + Gas fee.
+                  365SpaceProject was created as a means to access the ecosystem of people who are willing to stand behind a company whose sole purpose is to work with, donate to, and sponsor Global projects designed to reduce air pollution.
+                </p>
+                <p>
+                  As part of the 365SpaceProject, 5110 NFT’s will be minted. Each NFT represents a unique star map, which correlates to particular dates, times, and continental locations around the world. Our first mission after minting completes is to donate and plant 100,000 trees. Holding a 365SpaceProject NFT grants you immediate access to private community events, partnered retail & store discounts, and continued access to the inner circle of the project’s development.
+                </p>
+                <p>
+                  A 5% royalty will go towards continued development and promotion of the 365 Space Project.
+                </p>
+                <p>
+                  You can become a part of the 365 Space Project by minting an NFT at a cost of 0.09ETH + Gas.
                 </p>
               </div>
             </div>
@@ -238,7 +247,7 @@ const Home = () => {
                     <li>
                       <input type="checkbox" disabled id="ship" />
                       <label className="toggle" htmlFor="ship"></label>
-                      20 Days after mint - 10,000 trees planted
+                      20 Days after mint - 100,000 trees planted
                     </li>
                     <li>
                       <input type="checkbox" disabled id="ship" />
@@ -299,6 +308,25 @@ const Home = () => {
             <p className="share-tech">Our movement will fail without a strong community. We are dedicated to making a strong environment where everyone has equal say on this project and the causes we choose to support. This will be a space to make friends, network, and discuss long-term ideas for the 365 Space Project.</p>
           </div>
         </section>
+        <section id="charity" className="charity">
+          <div className="section-title">
+            <h1><span>Charity</span></h1>
+          </div>
+          <div className="container py-5">
+            <div className="row">
+              <div className="col-sm-6 mb-4 mb-md-0">
+                <a href="https://onetreeplanted.org/products/plant-trees?gclid=Cj0KCQjwt-6LBhDlARIsAIPRQcKOP6eoUu6U8sULbPq0jKFi9yEYtzU0TwquxL5XjIBG-L5n8HoXbr4aAkIKEALw_wcB" target="_blank" rel="noreferrer">
+                  <img src="/assets/img/trees.jpg" alt="" className="img-thumbnail img-fluid" />
+                </a>
+              </div>
+              <div className="col-sm-6 mb-4 mb-md-0">
+                <a href="https://www.4ocean.com" target="_blank" rel="noreferrer">
+                  <img src="/assets/img/oceans.jpg" alt="" className="img-thumbnail img-fluid" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
         <section id="team" className="team">
           <div className="section-title">
             <h1><span>Our &nbsp;Founders</span></h1>
@@ -326,7 +354,7 @@ const Home = () => {
               <div className="col-12 col-md-4 mb-4 mb-md-0">
                 <img className="w-100" src="/assets/img/ivan.png" alt="" />
                 <div className="text-center mt-2 text-white">
-                  Space Ivan<br />
+                  Space Brandon<br />
                   <div className="mt-3 small-text">Website</div>
                   <p className="mt-3">Has been creating website for clients for the past 7 years and is very familiar with UI. If you would like to see anything added to the website be sure to mention it in the Discord!</p>
                 </div>
